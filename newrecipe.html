@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>New Recipe</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<div id="header">
+    <a href="homepage.html"> <img src="images/logo.png" id="logo" height="110px"></a>
+    <nav>
+        <div class="navbox">
+            <a href="inbox.html"><img src="images/pot-01.png" height="32 " class="pot"></a>
+            <a href="recipebook.html">My Recipe Book</a>
+            <a href="newrecipe.html">New Recipe</a>
+            <a href="search.html">Search Recipes</a>
+            <a href="account.html">My Account</a>
+
+        </div>
+    </nav>
+</div>
+<div id="addrecipe">
+    <div>
+        <h1>Add a New Recipe</h1>
+        <label><h4>Recipe Name</h4></label>
+        <input type="text" class="field" id="recipename">
+
+        <label><h4>Introduction</h4></label>
+        <textarea name="textarea" cols="107.5" rows="5" id="recipeintroduction"></textarea>
+
+        <label><h4>Servings</h4></label>
+        <input type="number" class="field" id="servings">
+        <label><h4>Prep Time</h4></label>
+        <input type="number" class="fieldsmall" id="preptime">
+        <div class="smallfieldwithhead">
+            <label><h4>Cook Time</h4></label></div>
+        <input type="number" class="fieldsmall" id="cooktime">
+
+        <label><h4>Rest Time</h4></label>
+        <input type="number" class="fieldsmall" id="resttime">
+        <div id = "spacewithline"></div>
+        <h1>Ingredients</h1>
+        <div id="ingredient">
+            <label><h4>Ingredient</h4></label>
+        <input type="text" class="field" id="ingredientname">
+        <label><h4>Quantity</h4></label>
+        <input type="number" class="fieldsmall" id="quantity">
+        <label><h4>Unit</h4></label>
+        <input type="text" class="fieldsmall" id="unit">
+        </div>
+        <!--<input type="button" value="add ingredient" class="addfield" >-->
+
+
+        <div id = "spacewithline"></div>
+        <h1>Preperation</h1>
+        <label><h4>Step</h4></label>
+        <input type="text" class="field" id="step">
+        <!--<input type="button" value="add step" class="addfield">-->
+        <div id = "spacewithline"></div>
+
+
+        <h1>Details</h1>
+        <label><h4>Cuisine</h4></label>
+        <input type="text" class="field" id="cuisine">
+        <label><h4>Main Ingredient</h4></label>
+        <input type="text" class="fieldsmall" id="mainingredient">
+        <label><h4>Dietary Consideration</h4></label>
+        <input type="text" class="fieldsmall" id="dietaryconsideration">
+        </br>
+
+
+
+
+
+
+        <input type="button" value="Save Recipe" id="post_button">
+
+
+
+    </form>
+</div>
+    </div>
+
+<div id="footer">
+    <img src="images/logo.png" height="110px">
+    <p>©Yum! inc 2016 Copyright does not pertain to 3rd party content.</p>
+</div>
+
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+<script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCviJMVHKWMmdaiiWH4Jzdo06Ta8Qs97WY",
+        authDomain: "tsyumapp.firebaseapp.com",
+        databaseURL: "https://tsyumapp.firebaseio.com",
+        storageBucket: "tsyumapp.appspot.com",
+        messagingSenderId: "89606676238"
+    };
+    firebase.initializeApp(config);
+</script>
+
+    <!--<script src="js/addfield.js"></script>-->
+<script src="js/saverecipe.js"></script>
+</body>
+</html>

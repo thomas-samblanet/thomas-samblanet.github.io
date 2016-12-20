@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="login.css">
+    <title>Yum! Login</title>
+</head>
+<body>
+<div class="logo">
+    <a href="index.html"> <img src="images/logoredcir.png" height="150px"></a>
+</div>
+<div class="loginbox">
+    <div class="form"><H1>Sign In</H1>
+        <form>
+            <label><h3>Email</h3>
+                <input type="email" id="email">
+            </label>
+            <label><h3>Password</h3>
+                <input type="password" id="password">
+            </label>
+            <p><a href="recover.html">Forgot your email or password?</a></p>
+            <div class="buttonwrapper"><input type="submit" name="submit" value="Sign Up" id="login" onclick="return btntest_onclick()"></div>
+        </form>
+        <div class="border"></div>
+        <div class="newtoyum">
+            <p>New to Yum! <a href="register.html">Sign up now.</a></p>
+        </div>
+
+    </div>
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase-app.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.3/firebase.js"></script>
+    <script>
+        // Initialize Firebase
+        var config = {
+            apiKey: "AIzaSyCviJMVHKWMmdaiiWH4Jzdo06Ta8Qs97WY",
+            authDomain: "tsyumapp.firebaseapp.com",
+            databaseURL: "https://tsyumapp.firebaseio.com",
+            storageBucket: "tsyumapp.appspot.com",
+            messagingSenderId: "89606676238"
+        };
+        firebase.initializeApp(config);
+    </script>
+
+    <!--<script src="js/addfield.js"></script>-->
+    <script src="js/logininfo.js"></script>
+    <script language="javascript" type="text/javascript">
+        function btntest_onclick()
+        {
+            window.location.href = "homepage.html";
+        }
+    </script>
+
+</body>
+</html>
